@@ -11,13 +11,14 @@
 <%
   	HttpSession usersession = request.getSession();
 	usersession.invalidate();
-	out.println("로그아웃 되었습니다.");
+	out.println("<h1>로그아웃 되었습니다.</h1>");
 %>
+<!-- script의 인덱스 함수로 넘어 가겠다는 뜻이다. -->
+<button onclick="index()">메인화면</button>
 </body>
 <script>
-const deleteMember = (id) => {
-    console.log(id);
-    location.href = "/member/delete?id="+id; //delete의 id로받아서 삭제할수 있도록 하는 코드
-}
+	const index = () => {
+	    location.href = "/"; //HomeController.java에 설정한 index페이지로 이동하게 해주는것이다.
+	}
 </script>
 </html>

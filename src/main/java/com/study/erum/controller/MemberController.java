@@ -109,6 +109,11 @@ public class MemberController {
       String checkResult = memberService.emailCheck(memberEmail);
       return checkResult;
     }
+    
+    @GetMapping("/logout")
+    public String logout(){
+      return "logout";
+    }
 
 }
 
